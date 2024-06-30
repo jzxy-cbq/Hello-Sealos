@@ -1,8 +1,8 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    password: root
-    username: root
+    password: ${DB_PASSWORD:root}
+    username: ${DB_USERNAME:root}
     url: jdbc:postgresql://localhost/Hello-Sealos
   jpa:
     show-sql: true
