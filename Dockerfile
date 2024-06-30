@@ -12,7 +12,8 @@ COPY --from=layers /application/spring-boot-loader/ ./
 COPY --from=layers /application/snapshot-dependencies/ ./
 COPY --from=layers /application/application/ ./
 
-ENV DB_USERNAME=root
-ENV DB_PASSWORD=root
+ENV DB_USERNAME=YOUR_USERNAME
+ENV DB_PASSWORD=YOUR_PWD
+ENV DB_URL=YOUR_URL
 
 ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]

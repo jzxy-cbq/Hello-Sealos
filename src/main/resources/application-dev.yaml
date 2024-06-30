@@ -3,7 +3,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     password: ${DB_PASSWORD:root}
     username: ${DB_USERNAME:root}
-    url: jdbc:postgresql://localhost/Hello-Sealos
+    url: jdbc:${DB_URL:postgresql://localhost/Hello-Sealos}
   jpa:
     show-sql: true
     properties:
