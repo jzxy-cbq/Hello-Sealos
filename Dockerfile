@@ -12,7 +12,4 @@ COPY --from=layers /application/spring-boot-loader/ ./
 COPY --from=layers /application/snapshot-dependencies/ ./
 COPY --from=layers /application/application/ ./
 
-ENV MYSQL_USERNAME=root
-ENV MYSQL_PASSWORD=root
-
 ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]
